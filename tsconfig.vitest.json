@@ -2,6 +2,7 @@
   "extends": "./tsconfig.app.json",
   "exclude": [],
   "compilerOptions": {
+    "moduleResolution": "node",
     "composite": true,
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "types": ["node", "jsdom"]
