@@ -6,7 +6,7 @@ interface CounterState {
 } //interfaceで型注釈
 export const useCounterStore = defineStore('counter', () => {
   const state = ref<CounterState>({
-    count: 0
+    count: 3
   }) //optionsAPIだとstateプロパティにあたる、初期値を設定
   const doubleCount = computed(() => state.value.count * 2) //optionsAPIだとgettersにあたる。データの加工、算出をする
   function increment() {
@@ -23,13 +23,13 @@ export const useCounterStore = defineStore('counter', () => {
 // optionsAPIの構文
 
 // export const useCounterStore = defineStore('counter', {
-//   state: () => ({ count: 0, name: 'Eduardo' }),
+//   state: () => ({ count: 1, name: 'Eduardo' }),
 //   getters: {
-//     doubleCount: (state) => state.count * 2,
+//     doubleCount: (state) => state.count * 2
 //   },
 //   actions: {
 //     increment() {
 //       this.count++
-//     },
-//   },
+//     }
+//   }
 // })
