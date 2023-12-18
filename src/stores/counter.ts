@@ -1,15 +1,20 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
+interface CounterState {
+  count: number
+} //interfaceで型注釈
 export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0) //optionsAPIだとstateプロパティにあたる、初期値を設定
-  const doubleCount = computed(() => count.value * 2) //optionsAPIだとgettersにあたる。データの加工、算出をする
+  const state = ref<CounterState>({
+    count: 0
+  }) //optionsAPIだとstateプロパティにあたる、初期値を設定
+  const doubleCount = computed(() => state.value.count * 2) //optionsAPIだとgettersにあたる。データの加工、算出をする
   function increment() {
     //optionsAPIだとactionsにあたる、methodsと同じ役割
-    count.value++
+    state.value.count++
   }
 
-  return { count, doubleCount, increment }
+  return { state, doubleCount, increment }
 })
 
 //https://pinia.vuejs.org/core-concepts/ 公式ドキュメント
