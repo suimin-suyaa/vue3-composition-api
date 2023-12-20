@@ -1,10 +1,14 @@
 {
-  "extends": "./tsconfig.app.json",
-  "exclude": [],
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
-    "composite": true,
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-    "types": ["node", "jsdom"]
-  }
+    "strict": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "tests/**/*.ts", "tests/**/*.tsx"],
+  "exclude": ["node_modules"]
 }
