@@ -16,7 +16,10 @@ const onImgMousemove = (event: MouseEvent): void => {
 7/8行目
   初期値0
 9行目
-  引数にevent、MouseEvent型を指定
+  引数にevent、MouseEvent型を指定。voidにて戻り値がないことを明示
 10/11行目
 offsetX、offsetY...MouseEventの読み取り専用インターフェース。カーソルの位置を取得 
+
+https://developer.mozilla.org/ja/docs/Web/API/MouseEvent/offsetX
+
 -->
