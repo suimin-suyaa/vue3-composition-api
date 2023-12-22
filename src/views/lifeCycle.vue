@@ -47,4 +47,5 @@ onRenderTriggered((event: DebuggerEvent): void => {
   console.log('renderTriggered called: $(height.value) * $(width.value)')
   console.log(event)
 })
+// ライフサイクルフック
 </script>
